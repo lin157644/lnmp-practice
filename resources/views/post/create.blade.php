@@ -53,7 +53,7 @@
     <form class="form-container" action="{{ route('post.store') }}" method="POST">
         <div class="mb-3 me-auto">
             <label for="title" class="form-label">title</label>
-            <input name="title" type="text" class="form-control" id="title" placeholder="write something..." required >
+            <input name="title" type="text" class="form-control" id="title" placeholder="write something..." >
         </div>
         <div class="mb-3">
             <label for="content" class="form-label">content</label>

@@ -34,10 +34,17 @@ class PostController extends Controller
     
     public function store(Request $request){
         // 插入以下驗證器
+        $messages = [
+            'title.required' => '標題必需填入內容。',
+            'content.required' => '必須填入文章內容',
+            'max' => '不可大於十個字',
+            'string' => '格式須為字串'
+        ];
+
         $this->validate($request, [
             'title' => 'required|string|max:10',
             'content' => 'required|string',
-        ]);
+        ], $messages);
         // 插入以上驗證器
         //     title欄位: 一定要填 & 是個字串 & 最大字數為10
         //     content欄位: 一定要填 & 是個字串
