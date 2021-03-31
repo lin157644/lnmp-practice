@@ -40,7 +40,7 @@
     <header class="p-3 d-flex justify-content-between">
         <div></div>
         <h1 style="font-weight: 700;">INDEX</h1>
-        <a type="button" class="btn btn-secondary" href="{{ route('post.create') }}">create</a>
+        <a type="button" class="btn btn-secondary" href="{{ route('blog.create') }}">create</a>
     </header>
     <hr>
     </nav>
@@ -62,8 +62,8 @@
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
                                             <a type="button" class="btn btn-sm btn-outline-secondary"
-                                                href="{{ route('post.show', $post->id) }}">View</a>
-                                            <a href="{{ route('post.destroy', $post->id) }}" type="button"
+                                                href="{{ route('blog.show', $post->id) }}">View</a>
+                                            <a href="{{ route('blog.destroy', $post->id) }}" type="button"
                                                 class="btn btn-sm btn-outline-secondary">delete</a>
                                         </div>
                                     </div>

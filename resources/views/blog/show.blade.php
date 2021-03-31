@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
         <div style="margin-left: 8%"></div>
         <a class="navbar-brand  me-auto" href="#">Navbar</a>
-        <a class="nav-item nav-link " href="{{ route('post.index') }}">home</a>
+        <a class="nav-item nav-link " href="{{ route('blog.index') }}">home</a>
         <a class="nav-item nav-link " href="#">link</a>
         <div style="margin-right: 8%"></div>
     </nav>

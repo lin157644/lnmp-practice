@@ -32,7 +32,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
         <div style="margin-left: 8%"></div>
         <a class="navbar-brand  me-auto" href="#">Navbar</a>
-        <a class="nav-item nav-link " href="{{ route('post.index') }}">home</a>
+        <a class="nav-item nav-link " href="{{ route('blog.index') }}">home</a>
         <a class="nav-item nav-link " href="#">link</a>
         <div style="margin-right: 8%"></div>
     </nav>
@@ -50,7 +50,7 @@
     </header>
     <hr>
 
-    <form class="form-container" action="{{ route('post.store') }}" method="POST">
+    <form class="form-container" action="{{ route('blog.store') }}" method="POST">
         <div class="mb-3 me-auto">
             <label for="title" class="form-label">title</label>
             <input name="title" type="text" class="form-control" id="title" placeholder="write something..." >

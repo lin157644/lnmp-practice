@@ -11,28 +11,42 @@
 |
 */
 
-Route::get('/', [
-    'uses' => 'PostController@index',
-    'as' => 'post.index'
+
+
+Route::view('/profile', 'profile');
+/*Route::get('/profile', [
+    'uses' => 'BlogController@profile',
+    'as' => 'blog.create'
+]);*/
+
+Route::view('/projects', 'projects.index');
+Route::view('/projects/discordbot', 'projects.discordbot');
+Route::view('/projects/dormnet', 'projects.dormnet');
+Route::view('/projects/lnmp', 'projects.lnmp');
+
+//Blog Starts Here
+Route::get('/blog', [
+    'uses' => 'BlogController@index',
+    'as' => 'blog.index'
 ]);
 
-Route::get('/post/create', [
-    'uses' => 'PostController@create',
-    'as' => 'post.create'
+Route::get('/blog/create', [
+    'uses' => 'BlogController@create',
+    'as' => 'blog.create'
 ]);
 
-Route::get('/post/{id}', [
+Route::get('/blog/{id}', [
     //{} 傳變數
-    'uses' => 'PostController@show',
-    'as' => 'post.show'
+    'uses' => 'BlogController@show',
+    'as' => 'blog.show'
 ]);
 
-Route::post('/post', [
-    'uses' => 'PostController@store',
-    'as' => 'post.store'
+Route::post('/blog', [
+    'uses' => 'BlogController@store',
+    'as' => 'blog.store'
 ]);
 
-Route::get('/post/{id}/delete', [
-    'uses' => 'PostController@destroy',
-    'as' => 'post.destroy'
+Route::get('/blog/{id}/delete', [
+    'uses' => 'BlogController@destroy',
+    'as' => 'blog.destroy'
 ]);

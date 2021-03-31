@@ -6,14 +6,14 @@ use Illuminate\Http\Request;
 use App\Post;
 // 記得在上方補上面那行宣告
 
-class PostController extends Controller
+class BlogController extends Controller
 {
     public function index(){
         // 1. 把需要的包裹包好
         $posts = Post::all();
 
         // 2. 把包裹和規格表一起丟
-        return view('post.index', [
+        return view('blog.index', [
             'posts' => $posts
             // '前端收到的包裹名稱' => $後端要丟的包裹名稱
         ]);
@@ -23,13 +23,13 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($id);
         
-        return view('post.show', ['post' => $post]);
+        return view('blog.show', ['post' => $post]);
     }
 
     
     public function create(Request $request){
         // 回傳View/post/create.blade.php
-        return view('post.create');
+        return view('blog.create');
     }
     
     public function store(Request $request){
@@ -56,7 +56,7 @@ class PostController extends Controller
         ]);
         
         // 重新導向
-        return redirect()->route('post.index');
+        return redirect()->route('blog.index');
     }
     
     public function destroy($id){
@@ -66,6 +66,6 @@ class PostController extends Controller
         $post->delete();
         
         // 重新導向
-        return redirect()->route('post.index');
+        return redirect()->route('blog.index');
     }
 }
