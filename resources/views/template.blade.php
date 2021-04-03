@@ -67,6 +67,15 @@
     </div>
     <!-- Script -->
     <script src="{{ asset('js/app.js') }}"></script>
-    {{-- <script src="node_modules\bootstrap\dist\js\bootstrap.bundle.min.js"></script> --}}
+    <script>
+        function sidebarToggle()
+        {
+            let sidebar = document.getElementById("sidebar");
+            let content = document.getElementById("content");
+
+            sidebar.classList.toggle('active');
+            content.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
