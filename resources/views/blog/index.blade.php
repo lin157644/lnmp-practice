@@ -1,4 +1,4 @@
-@extends('master')
+@extends('template')
 
 @section('title')
     文章列表
@@ -29,13 +29,13 @@
 
 @section('content')
     <div style="height: 70px;"></div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+    {{-- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
         <div style="margin-left: 8%"></div>
         <a class="navbar-brand  me-auto" href="#">Navbar</a>
         <a class="nav-item nav-link " href="#">home</a>
         <a class="nav-item nav-link " href="#">link</a>
         <div style="margin-right: 8%"></div>
-    </nav>
+    </nav> --}}
 
     <header class="p-3 d-flex justify-content-between">
         <div></div>

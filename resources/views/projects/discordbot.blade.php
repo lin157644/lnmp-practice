@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('content')
-<p class="h3">Something TODO TODO TODO TODO TODO TODO TODO TODO TODO</p>
+<p class="h3">This is the DiscordBot</p>
 <ul class="list-unstyled">
     <li>Text 1</li>
     <li>Text 2</li>

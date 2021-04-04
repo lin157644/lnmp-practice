@@ -11,18 +11,20 @@
 |
 */
 
+Route::view('/', 'index')->name('index');
 
-
-Route::view('/profile', 'profile');
+Route::view('/profile', 'profile')->name('profile.index');
 /*Route::get('/profile', [
     'uses' => 'BlogController@profile',
     'as' => 'blog.create'
 ]);*/
 
-Route::view('/projects', 'projects.index');
-Route::view('/projects/discordbot', 'projects.discordbot');
-Route::view('/projects/dormnet', 'projects.dormnet');
-Route::view('/projects/lnmp', 'projects.lnmp');
+Route::view('/projects', 'projects.index')->name('projects.index');
+Route::view('/projects/discordbot', 'projects.discordbot')->name('projects.discordbot');
+Route::view('/projects/dormnet', 'projects.dormnet')->name('projects.dormnet');
+Route::view('/projects/lnmp', 'projects.lnmp')->name('projects.lnmp');
+
+Route::view('/contect', 'contect')->name('contect');
 
 //Blog Starts Here
 Route::get('/blog', [

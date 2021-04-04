@@ -1,11 +1,11 @@
 @extends('template')
 
 @section('content')
-<p class="h3">This is the Contect</p>
+<p class="h3">This is the Profile</p>
 <ul class="list-unstyled">
-    <li>Github</li>
-    <li>Email</li>
-    <li></li>
+    <li>Text 1</li>
+    <li>Text 2</li>
+    <li>Text 3</li>
     <li>Text 4</li>
     <li>Text 5</li>
     <li>Text 6</li>

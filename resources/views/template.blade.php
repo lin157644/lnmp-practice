@@ -11,54 +11,111 @@
     <meta property="og:type" content="profile"/>
     <meta property="og:image" content=""/>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
+    <script src="https://kit.fontawesome.com/bffc14945b.js" crossorigin="anonymous"></script>
     <title>XiangShun's profile</title>
+    @yield('styles')
 </head>
 <body>
     <!-- Sidebar -->
     <div class="wrapper">
         <nav id="sidebar" :class="{ active: isActive }">
             <div class="sidebarHeader">
-                <p class="h3">Navigation</p>
+                <p class="h3">LXS</p>
             </div>
             <ul class="list-unstyled">
-                <p>Xiang-Shun</p>
+                {{-- <p>Xiang-Shun</p> --}}
                 <li>
-                    <a href="/index.html">Home</a>
+                    <a href="{{ route('index') }}">
+                        <i class="fas fa-home fa-lg"></i>
+                        <span>Home</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="/index.html">Profile</a>
+                    
+                    <a href="{{ route('profile.index') }}">
+                        <i class="fas fa-address-card fa-lg"></i>
+                        <span>Profile</span>
+                    </a>
                 </li>
                 <li>
-                    <a data-bs-toggle="collapse" href="#projectSubmenu" role="button" aria-expanded="false" aria-controls="projectSubmenu">Projects</a>
+                    {{-- <a href="{{ route('projects.index') }}" class="col-2" style="display: inline;">
+
+                    </a> --}}
+                    {{-- <a data-bs-toggle="collapse" href="#projectSubmenu" role="button" aria-controls="projectSubmenu">
+                        <i class="fas fa-terminal"></i>
+                        <span>Discord Bot</span>
+                    </a>
+                    <div class="container">
+                        <div class="row .g-0 .gy-12 ">
+                            <a class="col-8" href="{{ route('projects.index') }}">
+                                <i class="fas fa-terminal"></i>
+                                Discord Bot
+                            </a>
+                            <a class="col-4" data-bs-toggle="collapse" href="#projectSubmenu" role="button" >
+                                <i class="fas fa-caret-down"></i>
+                            </a>
+                        </div>
+                    </div> --}}
+                    <div class="row gx-0 ">
+                        <a class="col-10  py-2" href="{{ route('projects.index') }}">
+                            <i class="fas fa-terminal"></i>
+                            Projects
+                        </a>
+                        <a class="col-2  py-2" data-bs-toggle="collapse" href="#projectSubmenu" role="button" style="justify-content: center">
+                            <i class="fas fa-caret-down" ></i>
+                        </a>
+                    </div>
                     <ul class="collapse list-unstyled" id="projectSubmenu">
                         <li>
-                            <a href="#">Discord Bot</a>
+                            
+                            <a href="{{ route('projects.discordbot') }}">
+                                <i class="fab fa-discord fa-lg"></i>
+                                <span>Discord Bot</span>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">RPI</a>
+                            
+                            <a href="{{ route('projects.dormnet') }}">
+                                <i class="fas fa-network-wired fa-lg"></i>
+                                <span>Dormnet</span>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">Web</a>
+                            
+                            <a href="{{ route('projects.lnmp') }}">
+                                <i class="fab fa-laravel fa-lg"></i>
+                                <span>LNMP</span>
+                            </a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="/index.html">Contect</a>
+                    <a href="{{ route('blog.index') }}">Blog</a>
                 </li>
+                <li>
+                    <a href="{{ route('contect') }}">Contect</a>
+                </li>
+                {{-- <li>
+                    
+                    <a href="{{ route('contect') }}">
+                        <i class="fas fa-car fa-lg"></i>
+                        asdf
+                    </a>
+                </li> --}}
             </ul>
             <footer>
                 <p>©LxS 2021 All rights reserved</p>
-                <p>Last Update:20210309</p>
+                <p>Last Update:20210404</p>
             </footer>
         </nav>
     
         <!-- Top Navigation Bar -->
         <div id="content">
-            <nav id="topNavbar" class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav id="topNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <button type="button" id="sidebarToggleBtn" class="btn btn-info" onclick="sidebarToggle()">
+                    <button type="button" id="sidebarToggleBtn" class="btn btn-dark" onclick="sidebarToggle()" >
                         <i class="fas fa-align-left"></i>
-                        <span>Toggle Sidebar</span>
+                        {{-- <span>Toggle Sidebar</span> --}}
                     </button>
                 </div>
             </nav>

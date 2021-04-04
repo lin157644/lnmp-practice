@@ -11745,68 +11745,54 @@ a:focus {
   align-items: stretch;
 }
 
-.navbar {
-  padding: 15px 10px;
-  background: #fff;
-  border: none;
-  border-radius: 0;
-  margin-bottom: 40px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-ul ul a {
-  font-size: 0.9em !important;
-  padding-left: 30px !important;
-  background: #6d7fcc;
-}
-
 #sidebar {
-  width: 250px;
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   z-index: 100;
-  margin-left: -250px;
   background: #7386D5;
   color: #fff;
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
+  min-width: 80px;
+  max-width: 80px;
+  text-align: center;
 }
 
 #sidebar .sidebarHeader {
   padding: 20px;
   background: #6d7fcc;
+  text-align: center;
 }
 
 #sidebar .sidebarHeader p {
   color: white;
 }
 
-#sidebar.active {
-  margin-left: 0px;
-}
-
 #sidebar ul {
   flex: 1;
 }
 
-#sidebar ul.components {
-  padding: 20px 0;
-  border-bottom: 1px solid #47748b;
-}
-
-#sidebar ul p {
-  color: #fff;
-  padding: 10px;
-}
-
-#sidebar ul li a {
+#sidebar ul li > a {
   padding: 10px;
   font-size: 1.1em;
   display: block;
   color: white;
+}
+
+#sidebar ul li > a span {
+  text-align: left;
+}
+
+#sidebar ul li > div {
+  font-size: 1.1em;
+  color: white;
+}
+
+#sidebar ul li > div span {
+  text-align: left;
 }
 
 #sidebar ul li a:hover {
@@ -11814,7 +11800,26 @@ ul ul a {
   background: #fff;
 }
 
+#sidebar ul ul a {
+  font-size: 1em;
+  background: #6d7fcc;
+  text-align: center;
+}
+
+#sidebar #projectSubmenu li i {
+  padding: 10px;
+}
+
+#sidebar #projectSubmenu li a span {
+  display: none;
+}
+
 #sidebar footer p {
+  display: none;
+}
+
+#sidebar.active footer p {
+  display: block;
   color: white;
   text-align: center;
   margin: 0;
@@ -11822,8 +11827,33 @@ ul ul a {
   flex: 0;
 }
 
+#sidebar.active {
+  min-width: 250px;
+  max-width: 250px;
+  background: #7386D5;
+  color: #fff;
+}
+
+#sidebar.active #projectSubmenu::after {
+  top: auto;
+  bottom: 10px;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+#sidebar.active #projectSubmenu a {
+  font-size: 1em;
+  padding-left: 30px;
+  background: #6d7fcc;
+  text-align: left;
+}
+
+#sidebar.active #projectSubmenu li a span {
+  display: inline;
+}
+
 #content {
-  width: 100%;
+  width: calc(100% - 80px);
   padding: 20px;
   min-height: 100vh;
   transition: all 0.3s;
@@ -11831,15 +11861,40 @@ ul ul a {
   top: 0;
   right: 0;
   display: inline-block;
+  background: linear-gradient(0deg, rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.8) 10%, #1a1a1a 50%), url(/img/bg_black.934eed8f.png);
 }
 
 #content.active {
   width: calc(100% - 250px);
 }
 
-#content .topNavbar {
+#content #sidebarToggleBtn {
+  width: 40px;
+  height: 40px;
+  background: #696969;
+}
+
+#content #sidebarToggleBtn span {
+  width: 80%;
+  height: 2px;
+  margin: 0 auto;
+  display: block;
+  background: #555;
+  transition: all 0.8s cubic-bezier(0.81, -0.33, 0.345, 1.375);
+}
+
+#content #topNavbar {
   display: flex;
   padding-right: 40px;
+}
+
+#content .navbar {
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.1);
 }
 
 #content .navbar-btn {

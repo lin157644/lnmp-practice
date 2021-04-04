@@ -30,75 +30,84 @@ a, a:hover, a:focus {
     width: 100%;
     align-items: stretch;
 }
-.navbar {
-    padding: 15px 10px;
-    background: #fff;
-    border: none;
-    border-radius: 0;
-    margin-bottom: 40px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    
-}
-
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #6d7fcc;
-}
 
 #sidebar {
-    width: 250px;
+    
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     z-index: 100;
-    margin-left: -250px;
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
     display: flex;
     flex-direction: column;
 
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+
     .sidebarHeader {
         padding: 20px;
         background: #6d7fcc;
+        text-align: center;
         p {
             color: white;
         }
-    }
-
-    &.active {
-        margin-left: 0px;
-        
     }
 
     ul {
         flex: 1;
     }
 
-    ul.components {
-        padding: 20px 0;
-        border-bottom: 1px solid #47748b;
+    ul li{
+
+        >a {
+            padding: 10px;
+            font-size: 1.1em;
+            display: block;
+            color: white;
+            span{
+                text-align: left;
+            }
+        }
+        >div{
+            font-size: 1.1em;
+            color: white;
+            span{
+                text-align: left;
+            }
+        }
     }
 
-    ul p {
-        color: #fff;
-        padding: 10px;
-    }
-
-    ul li a {
-        padding: 10px;
-        font-size: 1.1em;
-        display: block;
-        color: white;
-    }
-    ul li a:hover {
+    ul li a:hover{
         color: #7386D5;
         background: #fff;
     }
     
-    footer p {
+    ul ul a {
+        font-size: 1.0em;
+        //padding-left: 0px;
+        background: #6d7fcc;
+        text-align: center;
+    }
+
+    #projectSubmenu li {
+        i {
+            padding: 10px;
+        }
+        a span{
+            display: none;
+        }
+    }
+
+    footer p{
+        display: none;
+    }
+
+    &.active footer p {
+        display: block;
         color: white;
         text-align: center;
         margin: 0;
@@ -107,10 +116,33 @@ ul ul a {
 
     }
 
+    &.active {
+        min-width: 250px;
+        max-width: 250px;
+        background: #7386D5;
+        color: #fff;
+        #projectSubmenu::after {
+            top: auto;
+            bottom: 10px;
+            right: 50%;
+            -webkit-transform: translateX(50%);
+            -ms-transform: translateX(50%);
+            transform: translateX(50%);
+        }
+        #projectSubmenu a{
+            font-size: 1.0em;
+            padding-left: 30px;
+            background: #6d7fcc;
+            text-align: left;
+        }
+        #projectSubmenu li a span {
+            display: inline;
+        }   
+    }
 }
 
 #content {
-    width: 100%;
+    width: calc(100% - 80px);
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
@@ -118,14 +150,41 @@ ul ul a {
     top: 0;
     right: 0;
     display: inline-block;
+    background: linear-gradient(
+        0deg
+        ,rgba(26,26,26,.2),rgba(26,26,26,.8) 10%,#1a1a1a 50%),url(/img/bg_black.934eed8f.png);
 
     &.active {
         width: calc(100% - 250px);
     }
 
-    .topNavbar {
+    #sidebarToggleBtn {
+        width: 40px;
+        height: 40px;
+        background: #696969;
+        span {
+            width: 80%;
+            height: 2px;
+            margin: 0 auto;
+            display: block;
+            background: #555;
+            transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+        }
+    }
+
+    #topNavbar {
         display: flex;
         padding-right: 40px;
+    }
+
+    .navbar {
+        padding: 15px 10px;
+        background: #fff;
+        border: none;
+        border-radius: 0;
+        margin-bottom: 40px;
+        box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.1);
+        
     }
 
     .navbar-btn {
