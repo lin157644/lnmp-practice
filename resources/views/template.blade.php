@@ -90,18 +90,17 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="{{ route('blog.index') }}">Blog</a>
+                    <a href="{{ route('blog.index') }}">
+                        <i class="fab fa-blogger  fa-lg"></i>
+                        Blog
+                    </a>
                 </li>
                 <li>
-                    <a href="{{ route('contect') }}">Contect</a>
-                </li>
-                {{-- <li>
-                    
                     <a href="{{ route('contect') }}">
-                        <i class="fas fa-car fa-lg"></i>
-                        asdf
+                        <i class="fas fa-link  fa-lg"></i>
+                        Contect
                     </a>
-                </li> --}}
+                </li>
             </ul>
             <footer>
                 <p>©LxS 2021 All rights reserved</p>
