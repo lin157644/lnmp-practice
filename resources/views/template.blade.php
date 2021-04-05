@@ -25,64 +25,46 @@
             <ul class="list-unstyled">
                 {{-- <p>Xiang-Shun</p> --}}
                 <li>
-                    <a href="{{ route('index') }}">
+                    <a class="sidebarItem" href="{{ route('index') }}">
                         <i class="fas fa-home fa-lg"></i>
                         <span>Home</span>
                     </a>
                 </li>
                 <li>
                     
-                    <a href="{{ route('profile.index') }}">
+                    <a class="sidebarItem" href="{{ route('profile.index') }}">
                         <i class="fas fa-address-card fa-lg"></i>
                         <span>Profile</span>
                     </a>
                 </li>
                 <li>
-                    {{-- <a href="{{ route('projects.index') }}" class="col-2" style="display: inline;">
-
-                    </a> --}}
-                    {{-- <a data-bs-toggle="collapse" href="#projectSubmenu" role="button" aria-controls="projectSubmenu">
-                        <i class="fas fa-terminal"></i>
-                        <span>Discord Bot</span>
-                    </a>
-                    <div class="container">
-                        <div class="row .g-0 .gy-12 ">
-                            <a class="col-8" href="{{ route('projects.index') }}">
-                                <i class="fas fa-terminal"></i>
-                                Discord Bot
-                            </a>
-                            <a class="col-4" data-bs-toggle="collapse" href="#projectSubmenu" role="button" >
-                                <i class="fas fa-caret-down"></i>
-                            </a>
-                        </div>
-                    </div> --}}
-                    <div class="row gx-0 ">
-                        <a class="col-10  py-2" href="{{ route('projects.index') }}">
+                    <div class="row gx-0">
+                        <a class="col-10  py-2 sidebarItem" href="{{ route('projects.index') }}">
                             <i class="fas fa-terminal"></i>
                             Projects
                         </a>
-                        <a class="col-2  py-2" data-bs-toggle="collapse" href="#projectSubmenu" role="button" style="justify-content: center">
-                            <i class="fas fa-caret-down" ></i>
+                        <a class="col-2 py-2 d-flex align-items-center justify-content-center sidebarItem" data-bs-toggle="collapse" href="#projectSubmenu" role="button" >
+                            <i class="fas fa-caret-down"></i>
                         </a>
                     </div>
                     <ul class="collapse list-unstyled" id="projectSubmenu">
                         <li>
                             
-                            <a href="{{ route('projects.discordbot') }}">
+                            <a class="sidebarItem" href="{{ route('projects.discordbot') }}">
                                 <i class="fab fa-discord fa-lg"></i>
                                 <span>Discord Bot</span>
                             </a>
                         </li>
                         <li>
                             
-                            <a href="{{ route('projects.dormnet') }}">
+                            <a class="sidebarItem" href="{{ route('projects.dormnet') }}">
                                 <i class="fas fa-network-wired fa-lg"></i>
                                 <span>Dormnet</span>
                             </a>
                         </li>
                         <li>
                             
-                            <a href="{{ route('projects.lnmp') }}">
+                            <a class="sidebarItem" href="{{ route('projects.lnmp') }}">
                                 <i class="fab fa-laravel fa-lg"></i>
                                 <span>LNMP</span>
                             </a>
@@ -90,13 +72,13 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="{{ route('blog.index') }}">
+                    <a class="sidebarItem" href="{{ route('blog.index') }}">
                         <i class="fab fa-blogger  fa-lg"></i>
                         Blog
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('contect') }}">
+                    <a class="sidebarItem" href="{{ route('contect') }}">
                         <i class="fas fa-link  fa-lg"></i>
                         Contect
                     </a>
