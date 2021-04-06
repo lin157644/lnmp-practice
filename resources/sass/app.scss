@@ -156,6 +156,7 @@ canvas{
     top: 0;
     right: 0;
     display: inline-block;
+    z-index: 1;
     //background: linear-gradient(0deg,rgba(26,26,26,.2),rgba(26,26,26,.8) 10%,#1a1a1a 70%),url(/img/bg_black.934eed8f.png);
 
     &.active {
@@ -168,22 +169,24 @@ canvas{
         box-shadow: none;
         outline: none;
         border: none;
-        background: #1a1a1a;
+        background:none;
         span {
             width: 80%;
             height: 2px;
             display: block;
             background: white;
-            transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+            // 果凍效果
+            transition: all 0.8s cubic-bezier(0.8, -0.35, 0.2, 1.35);
             transform: none;
             opacity: 1;
             margin: 5px auto;
         }
-
+        
         &.active span:first-of-type {
             transform: rotate(45deg) translate(2px, 2px);
             margin: 0 auto;
         }
+
         &.active span:nth-of-type(2) {
             opacity: 0;
             margin: 0 auto;
@@ -214,10 +217,20 @@ canvas{
 #particles-js{
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg,rgba(26,26,26,.2),rgba(26,26,26,.8) 10%,#1a1a1a 70%),url(/img/bg_black.934eed8f.png);
+    
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+}
+.particles-js-canvas-el {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    //background-size: cover;
+    //background: linear-gradient(0deg,rgba(26,26,26,.2),rgba(26,26,26,.8) 10%,#1a1a1a 70%),url(/img/bg_black.934eed8f.png);
 }
 // #index{
 //     background: url(img/background_top.8b9e7d07.jpg);
@@ -230,7 +243,6 @@ canvas{
     align-content: center;
     min-height: 50vh;
     
-
     .container-fluid{
         margin: 0;
         padding: 0;
@@ -253,6 +265,7 @@ canvas{
             transition: 0.5s;
         }
 
+        //後方圖片暈影
         .box::before{
             content: '';
             position: absolute;
@@ -266,6 +279,7 @@ canvas{
             transition: 0.5s;
             filter: blur(30px);
         }
+        //後方圖片
         .box::after{
             content: '';
             position: absolute;
@@ -298,10 +312,14 @@ canvas{
         .box:nth-child(2):before,
         .box:nth-child(2):after{
             background: linear-gradient(315deg, #03a9f4, #ff0058);
+            
         }
         .box:nth-child(3):before,
         .box:nth-child(3):after{
-            background: linear-gradient(315deg, #4dff03, #00d0ff);
+            //background: linear-gradient(315deg, #4dff03, #00d0ff);
+            background: url(/img/Laravel.jpg);
+            background-size: cover;
+            background-position:center center;
         }
         .box span{
             display: block;
@@ -313,6 +331,7 @@ canvas{
             z-index: 50;
             pointer-events: none;
         }
+        //左上玻璃
         .box span::before{
             content: '';
             position: absolute;
@@ -335,7 +354,7 @@ canvas{
             height: 100px;
             opacity: 1;
         }
-
+        //右下玻璃
         .box span::after{
             content: '';
             position: absolute;
@@ -360,6 +379,7 @@ canvas{
             opacity: 1;
         }
 
+        //移動效果
         @keyframes animate{
             0%, 100%{
                 transform: translateY(10px);
@@ -368,6 +388,7 @@ canvas{
                 transform: translateY(-10px);
             }
         }
+        //主文字玻璃
         .box .content{
             position: relative;
             left: 0;
@@ -394,6 +415,7 @@ canvas{
             margin-bottom: 10px;
             line-height: 1.4em;
         }
+        //連結
         .box .content a{
             display: inline-block;
             font-size: 1.1em;

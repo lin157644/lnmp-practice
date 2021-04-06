@@ -95,7 +95,6 @@
     
         <!-- Top Navigation Bar -->
         <div id="content">
-            <div id="particles-js" style="display: block"></div>
             <nav id="topNavbar" class="navbar navbar-expand-lg bg-transparent">
                 <div class="container-fluid">
                     <button type="button" id="sidebarToggleBtn" onclick="sidebarToggle()" >
@@ -110,7 +109,8 @@
             @yield('content')
         </div>
         {{-- Bakcground Effect --}}
-        {{-- <div id="particles-js" style="display: block"></div> --}}
+        <div id="particles-js"></div>
+        
     </div>
     <!-- Script -->
     <script>
