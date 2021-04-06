@@ -6,7 +6,7 @@
 
 require('./bootstrap');
 require('particles.js/particles');
-import 'particles.js/particles';
+//import 'particles.js/particles';
 window.Vue = require('vue');
 
 /**
@@ -35,5 +35,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const particlesJS = window.particlesJS;
 particlesJS.load('particles-js', 'js/particles.json', function() {
     console.log('callback - particles.js config loaded');
+});
+const anime = require('animejs');
+anime({
+    targets: '.css-selector-demo .el',
+    translateX: 250
 });
 

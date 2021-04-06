@@ -24,6 +24,10 @@
         <nav id="sidebar">
             <div class="sidebarHeader">
                 <p class="h3">LXS</p>
+                <div id="sidebarToggleBtn2" class="toggle" onclick="sidebarToggle()" >
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
             <ul class="list-unstyled">
                 {{-- <p>Xiang-Shun</p> --}}
@@ -110,7 +114,7 @@
         </div>
         {{-- Bakcground Effect --}}
         <div id="particles-js"></div>
-        
+
     </div>
     <!-- Script -->
     <script>
@@ -119,10 +123,12 @@
             let sidebar = document.getElementById("sidebar");
             let content = document.getElementById("content");
             let btn = document.getElementById("sidebarToggleBtn");
+            let btn2 = document.getElementById("sidebarToggleBtn2");
 
             sidebar.classList.toggle('active');
             content.classList.toggle('active');
             btn.classList.toggle('active');
+            btn2.classList.toggle('active');
         }
     </script>
 </body>
