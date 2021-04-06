@@ -31,6 +31,11 @@ a, a:hover, a:focus {
     align-items: stretch;
 }
 
+canvas{
+    display:block;
+    vertical-align:bottom;
+  }
+
 #sidebar {
     
     position: fixed;
@@ -38,7 +43,7 @@ a, a:hover, a:focus {
     left: 0;
     height: 100vh;
     z-index: 50;
-    background: #7386D5;
+    background: #1F1F1F;
     color: white;
     transition: all 0.3s;
     display: flex;
@@ -49,8 +54,9 @@ a, a:hover, a:focus {
 
     .sidebarHeader {
         padding: 20px;
-        background: #6d7fcc;
-        text-align: center;
+        background: #2D2D2D;
+        align-items: center;
+        justify-content: center;
         p {
             color: white;
         }
@@ -69,23 +75,26 @@ a, a:hover, a:focus {
             color: white;
             span{
                 text-align: left;
+                display: none;
             }
         }
         >div{
             font-size: 1.1em;
+            background: #2D2D2D;
             color: white;
             span{
                 text-align: left;
+                display: none;
             }
         }
     }
 
     ul li a:hover{
-        color: #7386D5;
+        color: #1F1F1F;
         background: #fff;
     }
     
-    ul ul a {
+    ul ul a span{
         font-size: 1.0em;
         text-align: center;
     }
@@ -124,6 +133,9 @@ a, a:hover, a:focus {
         //     -ms-transform: translateX(50%);
         //     transform: translateX(50%);
         // }
+        ul li a span{
+            display: inline;
+        }
         #projectSubmenu a{
             font-size: 1.0em;
             padding-left: 30px;
@@ -144,9 +156,7 @@ a, a:hover, a:focus {
     top: 0;
     right: 0;
     display: inline-block;
-    background: linear-gradient(
-        0deg
-        ,rgba(26,26,26,.2),rgba(26,26,26,.8) 10%,#1a1a1a 70%),url(/img/bg_black.934eed8f.png);
+    //background: linear-gradient(0deg,rgba(26,26,26,.2),rgba(26,26,26,.8) 10%,#1a1a1a 70%),url(/img/bg_black.934eed8f.png);
 
     &.active {
         width: calc(100% - 250px);
@@ -155,42 +165,63 @@ a, a:hover, a:focus {
     #sidebarToggleBtn {
         width: 40px;
         height: 40px;
-        background: #696969;
+        box-shadow: none;
+        outline: none;
+        border: none;
+        background: #1a1a1a;
         span {
             width: 80%;
             height: 2px;
-            margin: 0 auto;
             display: block;
-            background: #555;
+            background: white;
             transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+            transform: none;
+            opacity: 1;
+            margin: 5px auto;
+        }
+
+        &.active span:first-of-type {
+            transform: rotate(45deg) translate(2px, 2px);
+            margin: 0 auto;
+        }
+        &.active span:nth-of-type(2) {
+            opacity: 0;
+            margin: 0 auto;
+        }
+        &.active span:last-of-type {
+            transform: rotate(-45deg) translate(1px, -1px);
+            margin: 0 auto;
         }
     }
 
     #topNavbar {
         display: flex;
         padding-right: 40px;
-    }
-
-    .navbar {
         padding: 15px 10px;
         background: #fff;
         border: none;
         border-radius: 0;
         margin-bottom: 40px;
-        box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.1);
+        //box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.1);
         
-    }
-
-    .navbar-btn {
-        box-shadow: none;
-        outline: none !important;
-        border: none;
     }
 
     ul li {
         font-size: 50px;
     }
 }
+
+#particles-js{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg,rgba(26,26,26,.2),rgba(26,26,26,.8) 10%,#1a1a1a 70%),url(/img/bg_black.934eed8f.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+// #index{
+//     background: url(img/background_top.8b9e7d07.jpg);
+// }
 
 #projectsIndex{
     

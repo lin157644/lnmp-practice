@@ -5,7 +5,8 @@
  */
 
 require('./bootstrap');
-
+require('particles.js/particles');
+import 'particles.js/particles';
 window.Vue = require('vue');
 
 /**
@@ -27,7 +28,12 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app'
+// const app = new Vue({
+//     el: '#app'
+// });
+
+const particlesJS = window.particlesJS;
+particlesJS.load('particles-js', 'js/particles.json', function() {
+    console.log('callback - particles.js config loaded');
 });
 

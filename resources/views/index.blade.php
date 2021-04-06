@@ -23,9 +23,9 @@
 @endsection
 
 @section('content')
-<div class="container-fluid">
-    <div class="project-item">
-        DiscordBot
+<div id="index" class="container-fluid">
+    <div>
+        TODO
     </div>
 </div>
 @endsection
