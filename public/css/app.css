@@ -11882,6 +11882,18 @@ canvas {
   display: inline;
 }
 
+@media (max-width: 768px) {
+  #sidebar {
+    min-width: 80px;
+    max-width: 80px;
+    margin-left: -80px;
+  }
+
+  #sidebar.active {
+    margin-left: 0px;
+  }
+}
+
 #content {
   width: calc(100% - 80px);
   padding: 20px;
@@ -12104,7 +12116,24 @@ canvas {
 #projectsIndex .container-lg .box:nth-child(3):after,
 #projectsIndex .container-xl .box:nth-child(3):after,
 #projectsIndex .container-xxl .box:nth-child(3):after {
-  background: url(/img/Laravel.jpg);
+  background: url(/img/laravel.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+#projectsIndex .container-fluid .box:nth-child(4):before,
+#projectsIndex .container-sm .box:nth-child(4):before,
+#projectsIndex .container-md .box:nth-child(4):before,
+#projectsIndex .container-lg .box:nth-child(4):before,
+#projectsIndex .container-xl .box:nth-child(4):before,
+#projectsIndex .container-xxl .box:nth-child(4):before,
+#projectsIndex .container-fluid .box:nth-child(4):after,
+#projectsIndex .container-sm .box:nth-child(4):after,
+#projectsIndex .container-md .box:nth-child(4):after,
+#projectsIndex .container-lg .box:nth-child(4):after,
+#projectsIndex .container-xl .box:nth-child(4):after,
+#projectsIndex .container-xxl .box:nth-child(4):after {
+  background: url(/img/flutter2.png);
   background-size: cover;
   background-position: center center;
 }

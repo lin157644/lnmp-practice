@@ -154,6 +154,7 @@ canvas{
     &.active {
         min-width: 250px;
         max-width: 250px;
+        
         // #projectSubmenu::after {
         //     top: auto;
         //     bottom: 10px;
@@ -173,6 +174,15 @@ canvas{
         #projectSubmenu li a span {
             display: inline;
         }   
+    }
+    @media (max-width: 768px) {
+        min-width: 80px;
+        max-width: 80px;
+        margin-left: -80px;
+        &.active{
+            margin-left: 0px;
+        }
+
     }
 }
 
@@ -346,7 +356,13 @@ canvas{
         .box:nth-child(3):before,
         .box:nth-child(3):after{
             //background: linear-gradient(315deg, #4dff03, #00d0ff);
-            background: url(/img/Laravel.jpg);
+            background: url(/img/laravel.jpg);
+            background-size: cover;
+            background-position:center center;
+        }
+        .box:nth-child(4):before,
+        .box:nth-child(4):after{
+            background: url(/img/flutter2.png);
             background-size: cover;
             background-position:center center;
         }
