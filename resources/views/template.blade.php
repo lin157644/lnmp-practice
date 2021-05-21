@@ -17,14 +17,15 @@
     <title>XiangShun's profile</title>
     @yield('styles')
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/custom.js') }}"></script>
 </head>
 <body>
     <!-- Sidebar -->
-    <div class="wrapper">
+    <div id="app" class="wrapper">
         <nav id="sidebar">
             <div class="sidebarHeader">
                 <p class="h3">LXS</p>
-                <div id="sidebarToggleBtn2" class="toggle" onclick="sidebarToggle()" >
+                <div id="sidebarToggleBtn2" class="toggle" onclick="sidebarToggle()" v-on:click="clickme">
                     <span></span>
                     <span></span>
                 </div>
@@ -101,7 +102,7 @@
         <div id="content">
             <nav id="topNavbar" class="navbar navbar-expand-lg bg-transparent">
                 <div class="container-fluid">
-                    <button type="button" id="sidebarToggleBtn" onclick="sidebarToggle()" >
+                    <button type="button" id="sidebarToggleBtn" onclick="sidebarToggle()" v-on:click="clickme">
                         {{-- <i class="fas fa-align-left"></i> --}}
                         {{-- <span>Toggle Sidebar</span> --}}
                         <span></span>
@@ -118,18 +119,10 @@
     </div>
     <!-- Script -->
     <script>
-        function sidebarToggle()
-        {
-            let sidebar = document.getElementById("sidebar");
-            let content = document.getElementById("content");
-            let btn = document.getElementById("sidebarToggleBtn");
-            let btn2 = document.getElementById("sidebarToggleBtn2");
-
-            sidebar.classList.toggle('active');
-            content.classList.toggle('active');
-            btn.classList.toggle('active');
-            btn2.classList.toggle('active');
-        }
+        const particlesJS = window.particlesJS;
+        particlesJS.load('particles-js', '{{asset('js/particles.json')}}', function() {
+            console.log('callback - particles.js config loaded');
+        });
     </script>
 </body>
 </html>

@@ -24,8 +24,11 @@
 
 @section('content')
 <div id="index" class="container-fluid">
-    <div>
-        施工中
-    </div>
+    <p>
+        資工系的審查者您好，歡迎來到我的網站。
+    </p>
+    <p>
+        此處尚在建設中，還請手下留情。
+    </p>
 </div>
 @endsection

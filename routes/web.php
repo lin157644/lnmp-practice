@@ -19,7 +19,7 @@ Route::view('/profile', 'profile')->name('profile.index');
     'as' => 'blog.create'
 ]);*/
 
-Route::view('/projects', 'projects.index')->name('projects.index');
+Route::view('/projects/index', 'projects.index')->name('projects.index');
 Route::view('/projects/discordbot', 'projects.discordbot')->name('projects.discordbot');
 Route::view('/projects/dormnet', 'projects.dormnet')->name('projects.dormnet');
 Route::view('/projects/lnmp', 'projects.lnmp')->name('projects.lnmp');
