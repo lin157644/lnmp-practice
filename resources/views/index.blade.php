@@ -25,7 +25,7 @@
 @section('content')
 <div id="index" class="container-fluid">
     <div>
-        TODO
+        施工中
     </div>
 </div>
 @endsection
