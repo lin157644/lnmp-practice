@@ -28,15 +28,8 @@
 @endsection
 
 @section('content')
+<div class="content">
     <div style="height: 70px;"></div>
-    {{-- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
-        <div style="margin-left: 8%"></div>
-        <a class="navbar-brand  me-auto" href="#">Navbar</a>
-        <a class="nav-item nav-link " href="#">home</a>
-        <a class="nav-item nav-link " href="#">link</a>
-        <div style="margin-right: 8%"></div>
-    </nav> --}}
-
     <header class="p-3 d-flex justify-content-between">
         <div></div>
         <h1 style="font-weight: 700;">INDEX</h1>
@@ -75,4 +68,5 @@
             </div>
         </div>
     </div>
+</div>
 @endsection

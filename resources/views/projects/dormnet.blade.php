@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('content')
-<div id="porjectDormnet">
+<div id="porjectDormnet" class="content">
     <p class="h3">Dorment</p>
     <p>
         由於中央大學的宿舍有3GB的上傳限流，而我本身又曾數次不小心超用而受到限制，

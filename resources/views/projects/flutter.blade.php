@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('content')
-<div id="projectFlutter">
+<div id="projectFlutter" class="content">
     <p class="h3">This is the Dorment</p>
     <p>
         在DSC的學長悉心的引導與教學下，

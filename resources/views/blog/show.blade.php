@@ -13,6 +13,7 @@
     </style>
 @endsection
 @section('content')
+<div class="content">
     <div style="height: 70px;"></div>
     <header class="p-3 d-flex justify-content-center">
         <h1 style="font-weight: 700;">SHOW</h1>
@@ -39,4 +40,5 @@
         </div>
 
     </div>
+<div>
 @endsection

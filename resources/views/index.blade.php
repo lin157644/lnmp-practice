@@ -23,12 +23,9 @@
 @endsection
 
 @section('content')
-<div id="index" class="container-fluid">
-    <p>
-        資工系的審查者您好，歡迎來到我的網站。
-    </p>
-    <p>
-        此處尚在建設中，還請手下留情。
-    </p>
+<div id="index" class="content">
+    <p>資工系的審查者您好，歡迎來到我的網站。</p>
+    <p>此處尚在建設中，還請手下留情。</p>
+    <p>請展開左側選單切換頁面。</p>
 </div>
 @endsection

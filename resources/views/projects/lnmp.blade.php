@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('content')
-<div id="projectLnmp">
+<div id="projectLnmp" class="content">
     <p class="h3">This is the LNMP</p>
     <p>
         我於Raspberry Pi 4上建立基於LNMP(Laravel Nginx MariaDB PHP) 開放原始碼框架的網頁伺服器，

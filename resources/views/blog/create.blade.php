@@ -27,7 +27,7 @@
 @endsection
 
 @section('content')
-    
+<div class="content">
     <div style="height: 70px;"></div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
         <div style="margin-left: 8%"></div>
@@ -64,4 +64,5 @@
             <button type="submit" class="btn btn-secondary">submit</button>
         </div>
     </form>
+</div>
 @endsection

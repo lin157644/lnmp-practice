@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('content')
-<div id="profile">
+<div id="profile" class="content">
     <p class="h3">This is my Profile</p>
     <ul class="list-unstyled">
         <li>林祥順</li>

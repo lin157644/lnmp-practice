@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('content')
-<div id="projectDiscordBot">
+<div id="projectDiscordBot" class="content">
     <p class="h3">DiscordBot</p>
     <p>
         Discord作為近年高速崛起的新興跨平台網路即時通訊平台，

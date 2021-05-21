@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('content')
-<div id="projectTf">
+<div id="projectTf" class="content">
     <p class="h3">This is the LNMP</p>
     <p>
         利用Keras的預設資料集製作辨別衣服種類的模型，
