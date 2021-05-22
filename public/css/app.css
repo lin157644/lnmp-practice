@@ -11238,10 +11238,12 @@ a, a:hover, a:focus {
   color: #111;
   background: #fff;
   padding: 10px;
-  border-radius: 4px;
   text-decoration: none;
   font-weight: 700;
   margin-top: 5px;
+}
+#projectsIndex .container-fluid .box .text a:nth-of-type(2), #projectsIndex .container-sm .box .text a:nth-of-type(2), #projectsIndex .container-md .box .text a:nth-of-type(2), #projectsIndex .container-lg .box .text a:nth-of-type(2), #projectsIndex .container-xl .box .text a:nth-of-type(2), #projectsIndex .container-xxl .box .text a:nth-of-type(2) {
+  background: white;
 }
 
 #particles-js {
