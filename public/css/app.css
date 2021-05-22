@@ -10857,11 +10857,11 @@ a, a:hover, a:focus {
   height: 100vh;
 }
 
-#navWrapper {
+#sideBarWrapper {
   flex: 0 0 auto;
   z-index: 87;
 }
-#navWrapper #sidebar {
+#sideBarWrapper #sidebar {
   z-index: 50;
   background: #1F1F1F;
   color: white;
@@ -10870,16 +10870,16 @@ a, a:hover, a:focus {
   max-width: 80px;
   text-align: center;
 }
-#navWrapper #sidebar .sidebarHeader {
-  padding: 20px;
+#sideBarWrapper #sidebar .sidebarHeader {
+  height: 60px;
+  padding: 10px;
   background: #2D2D2D;
-  align-items: center;
-  justify-content: center;
 }
-#navWrapper #sidebar .sidebarHeader p {
+#sideBarWrapper #sidebar .sidebarHeader span {
+  font-size: 1.5em;
   color: white;
 }
-#navWrapper #sidebar .sidebarHeader .toggle {
+#sideBarWrapper #sidebar .sidebarHeader .toggle {
   position: absolute;
   margin-right: -10;
   right: -40px;
@@ -10891,7 +10891,7 @@ a, a:hover, a:focus {
   border-radius: 50%;
   z-index: 89;
 }
-#navWrapper #sidebar .sidebarHeader .toggle::before {
+#sideBarWrapper #sidebar .sidebarHeader .toggle::before {
   content: "";
   font-family: fontAwesome;
   position: relative;
@@ -10902,76 +10902,76 @@ a, a:hover, a:focus {
   font-size: 16px;
   color: #1f1f1f;
 }
-#navWrapper #sidebar .sidebarHeader .toggle.active::before {
+#sideBarWrapper #sidebar .sidebarHeader .toggle.active::before {
   content: "";
 }
-#navWrapper #sidebar ul {
+#sideBarWrapper #sidebar ul {
   flex-grow: 1;
 }
-#navWrapper #sidebar ul li > a {
+#sideBarWrapper #sidebar ul li > a {
   padding: 10px;
   font-size: 1.1em;
   display: block;
   color: white;
 }
-#navWrapper #sidebar ul li > a span {
+#sideBarWrapper #sidebar ul li > a span {
   text-align: left;
   display: none;
 }
-#navWrapper #sidebar ul li > div {
+#sideBarWrapper #sidebar ul li > div {
   font-size: 1.1em;
   background: #2D2D2D;
   color: white;
 }
-#navWrapper #sidebar ul li > div span {
+#sideBarWrapper #sidebar ul li > div span {
   text-align: left;
   display: none;
 }
-#navWrapper #sidebar ul li a:hover {
+#sideBarWrapper #sidebar ul li a:hover {
   color: #1F1F1F;
   background: #fff;
 }
-#navWrapper #sidebar ul ul a span {
+#sideBarWrapper #sidebar ul ul a span {
   font-size: 1em;
   text-align: center;
 }
-#navWrapper #sidebar #projectSubmenu li i {
+#sideBarWrapper #sidebar #projectSubmenu li i {
   padding: 10px;
 }
-#navWrapper #sidebar #projectSubmenu li a span {
+#sideBarWrapper #sidebar #projectSubmenu li a span {
   display: none;
 }
-#navWrapper #sidebar footer {
+#sideBarWrapper #sidebar footer {
   display: none;
 }
-#navWrapper #sidebar.active footer {
+#sideBarWrapper #sidebar.active footer {
   display: block;
   color: white;
   text-align: center;
   font-size: small;
 }
-#navWrapper #sidebar.active {
+#sideBarWrapper #sidebar.active {
   min-width: 250px;
   max-width: 250px;
 }
-#navWrapper #sidebar.active ul li a span {
+#sideBarWrapper #sidebar.active ul li a span {
   display: inline;
 }
-#navWrapper #sidebar.active #projectSubmenu a {
+#sideBarWrapper #sidebar.active #projectSubmenu a {
   font-size: 1em;
   padding-left: 30px;
   text-align: left;
 }
-#navWrapper #sidebar.active #projectSubmenu li a span {
+#sideBarWrapper #sidebar.active #projectSubmenu li a span {
   display: inline;
 }
 @media (max-width: 768px) {
-  #navWrapper #sidebar {
+  #sideBarWrapper #sidebar {
     min-width: 80px;
     max-width: 80px;
     margin-left: -80px;
   }
-  #navWrapper #sidebar.active {
+  #sideBarWrapper #sidebar.active {
     margin-left: 0px;
   }
 }
@@ -11010,23 +11010,24 @@ a, a:hover, a:focus {
 }
 
 #sidebarToggleBtn {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
+  margin: 10px 10px;
+  z-index: 100;
   box-shadow: none;
   outline: none;
   border: none;
   background: none;
-  z-index: 100;
 }
 #sidebarToggleBtn span {
   width: 80%;
   height: 2px;
+  margin: 7px auto;
   display: block;
   background: white;
   transition: all 0.8s cubic-bezier(0.8, -0.35, 0.2, 1.35);
   transform: none;
   opacity: 1;
-  margin: 5px auto;
 }
 #sidebarToggleBtn.active span:first-of-type {
   transform: rotate(45deg) translate(2px, 2px);
@@ -11039,14 +11040,6 @@ a, a:hover, a:focus {
 #sidebarToggleBtn.active span:last-of-type {
   transform: rotate(-45deg) translate(1px, -1px);
   margin: 0 auto;
-}
-
-#topNavbar {
-  padding-right: 40px;
-  padding: 15px 5px;
-  background: #fff;
-  border: none;
-  border-radius: 0;
 }
 
 #projectsIndex {

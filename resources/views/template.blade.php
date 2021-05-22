@@ -21,13 +21,12 @@
 <body>
     <div id="app" class="container-fluid d-flex g-0">
         <!-- Sidebar -->
-        <div id="navWrapper" class="d-flex">
-            <nav id="sidebar" class="g-0 d-flex flex-column">
-                <div class="sidebarHeader">
-                    <span class="h3 g-0">LXS</span>
+        <div id="sideBarWrapper" class="d-flex">
+            <nav id="sidebar" class="d-flex flex-column">
+                <div class="sidebarHeader d-flex align-items-center justify-content-center">
+                    <span>XSLin</span>
                 </div>
-                <ul class="list-unstyled g-0">
-                    {{-- <p>Xiang-Shun</p> --}}
+                <ul class="list-unstyled">
                     <li>
                         <a href="{{ route('index') }}">
                             <i class="fas fa-home fa-lg"></i>
@@ -90,31 +89,22 @@
                 </ul>
                 <footer>
                     <p>©LxS 2021 All rights reserved</p>
-                    <p>Last Update:20210404</p>
+                    <p>Last Update:20210522</p>
                 </footer>
             </nav>
-            <div id="sidebarToggleBtn2" class="toggle g-0 col" onclick="sidebarToggle()" v-on:click="clickme">
-                <span></span>
-                <span></span>
-            </div>
         </div>
         <section id="section" class="g-0">
             <button id="btn-back-to-top" type="button" class="btn btn-floating btn-lg">
                 <i class="fas fa-arrow-up"></i>
             </button>
             <!-- Top Navigation Bar -->
-            <div class="">
-                <nav id="topNavbar" class="navbar navbar-expand-lg bg-transparent">
-                    <div class="container-fluid">
-                        <button type="button" id="sidebarToggleBtn" onclick="sidebarToggle()" v-on:click="clickme">
-                            {{-- <i class="fas fa-align-left"></i> --}}
-                            {{-- <span>Toggle Sidebar</span> --}}
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                </nav>
+            <div class="container-fluid">
+                <button type="button" id="sidebarToggleBtn" onclick="sidebarToggle()" v-on:click="clickme">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
                 @yield('content')
             </div>
             {{-- Bakcground Effect --}}
