@@ -24,7 +24,7 @@ Route::view('/projects/discordbot', 'projects.discordbot')->name('projects.disco
 Route::view('/projects/dormnet', 'projects.dormnet')->name('projects.dormnet');
 Route::view('/projects/lnmp', 'projects.lnmp')->name('projects.lnmp');
 
-Route::view('/contect', 'contect')->name('contect');
+Route::view('/contact', 'contact')->name('contact');
 
 //Blog Starts Here
 Route::get('/blog', [

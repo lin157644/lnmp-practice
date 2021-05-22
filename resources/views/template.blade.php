@@ -81,9 +81,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('contect') }}">
+                        <a href="{{ route('contact') }}">
                             <i class="fas fa-link  fa-lg"></i>
-                            <span>Contect</span>
+                            <span>Contact</span>
                         </a>
                     </li>
                 </ul>

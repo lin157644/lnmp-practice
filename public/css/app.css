@@ -10841,8 +10841,7 @@ body {
 
 p {
   font-family: "Poppins", sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
+  font-size: 1em;
   line-height: 1.7em;
   color: #fff;
 }
@@ -10862,13 +10861,13 @@ a, a:hover, a:focus {
   z-index: 87;
 }
 #sideBarWrapper #sidebar {
-  z-index: 50;
-  background: #1F1F1F;
-  color: white;
-  transition: all 0.3s;
   min-width: 80px;
   max-width: 80px;
+  z-index: 50;
   text-align: center;
+  color: white;
+  background: #1F1F1F;
+  transition: all 0.3s;
 }
 #sideBarWrapper #sidebar .sidebarHeader {
   height: 60px;
@@ -10879,34 +10878,12 @@ a, a:hover, a:focus {
   font-size: 1.5em;
   color: white;
 }
-#sideBarWrapper #sidebar .sidebarHeader .toggle {
-  position: absolute;
-  margin-right: -10;
-  right: -40px;
-  width: 40px;
-  height: 40px;
-  background: white;
-  cursor: pointer;
-  border: 5px solid #1f1f1f;
-  border-radius: 50%;
-  z-index: 89;
-}
-#sideBarWrapper #sidebar .sidebarHeader .toggle::before {
-  content: "";
-  font-family: fontAwesome;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  line-height: 30px;
-  text-align: center;
-  font-size: 16px;
-  color: #1f1f1f;
-}
-#sideBarWrapper #sidebar .sidebarHeader .toggle.active::before {
-  content: "";
-}
 #sideBarWrapper #sidebar ul {
   flex-grow: 1;
+}
+#sideBarWrapper #sidebar ul li a:hover {
+  color: #1F1F1F;
+  background: #fff;
 }
 #sideBarWrapper #sidebar ul li > a {
   padding: 10px;
@@ -10927,28 +10904,19 @@ a, a:hover, a:focus {
   text-align: left;
   display: none;
 }
-#sideBarWrapper #sidebar ul li a:hover {
-  color: #1F1F1F;
-  background: #fff;
-}
-#sideBarWrapper #sidebar ul ul a span {
-  font-size: 1em;
-  text-align: center;
-}
 #sideBarWrapper #sidebar #projectSubmenu li i {
   padding: 10px;
 }
 #sideBarWrapper #sidebar #projectSubmenu li a span {
   display: none;
+  font-size: 1em;
+  text-align: center;
 }
 #sideBarWrapper #sidebar footer {
-  display: none;
-}
-#sideBarWrapper #sidebar.active footer {
-  display: block;
   color: white;
   text-align: center;
   font-size: small;
+  display: none;
 }
 #sideBarWrapper #sidebar.active {
   min-width: 250px;
@@ -10964,6 +10932,9 @@ a, a:hover, a:focus {
 }
 #sideBarWrapper #sidebar.active #projectSubmenu li a span {
   display: inline;
+}
+#sideBarWrapper #sidebar.active footer {
+  display: block;
 }
 @media (max-width: 768px) {
   #sideBarWrapper #sidebar {
@@ -10989,13 +10960,13 @@ a, a:hover, a:focus {
   display: none;
 }
 #section .content {
-  padding-left: 35px;
-  min-height: calc(100vh - 70px);
-  transition: all 0.3s;
+  padding: 0px 35px;
   top: 0;
-  right: 0;
-  z-index: 1;
+  left: 0;
+  min-height: calc(100vh - 70px);
   width: 100%;
+  z-index: 1;
+  transition: all 0.3s;
   word-wrap: break-word;
 }
 #section .content #index {
@@ -11005,8 +10976,19 @@ a, a:hover, a:focus {
 #section .content.active {
   width: calc(100% - 250px);
 }
-#section .content ul li {
-  font-size: 50px;
+
+#contact .pageTitle {
+  font-size: 4em;
+}
+#contact a {
+  font-size: 5em;
+}
+#contact i {
+  padding-right: 5px;
+}
+
+#profile .pageTitle {
+  font-size: 3em;
 }
 
 #sidebarToggleBtn {
@@ -11112,11 +11094,9 @@ a, a:hover, a:focus {
 #projectsIndex .container-lg .box:nth-child(1):after,
 #projectsIndex .container-xl .box:nth-child(1):after,
 #projectsIndex .container-xxl .box:nth-child(1):after {
-  /* background: linear-gradient(315deg, #ffbc00, #ff0058); */
   background: url(/img/discord.jpg);
   background-size: cover;
   background-position: center center;
-  /* background: url(/img/bg_white.5c644fd8.png); */
 }
 #projectsIndex .container-fluid .box:nth-child(2):before, #projectsIndex .container-sm .box:nth-child(2):before, #projectsIndex .container-md .box:nth-child(2):before, #projectsIndex .container-lg .box:nth-child(2):before, #projectsIndex .container-xl .box:nth-child(2):before, #projectsIndex .container-xxl .box:nth-child(2):before,
 #projectsIndex .container-fluid .box:nth-child(2):after,
