@@ -6,7 +6,7 @@
 require('./bootstrap');
 require('particles.js/particles');
 //import 'particles.js/particles';
-// window.Vue = require('vue');
+// window.Vue = require('vue'); // <- Depreciated
 import Vue from 'vue'
 /**
  * The following block of code may be used to automatically register your
