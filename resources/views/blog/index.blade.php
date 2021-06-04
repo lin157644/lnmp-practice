@@ -33,7 +33,7 @@
     <header class="p-3 d-flex justify-content-between">
         <div></div>
         <h1 style="font-weight: 700;">INDEX</h1>
-        <a type="button" class="btn btn-secondary" href="{{ route('blog.create') }}">create</a>
+        {{-- <a type="button" class="btn btn-secondary" href="{{ route('blog.create') }}">create</a> --}}
     </header>
     <hr>
     </nav>
