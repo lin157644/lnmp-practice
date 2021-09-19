@@ -14,23 +14,23 @@
 <div class="content">
     {{-- <div style="height: 70px;"></div> --}}
     <header class="p-3 d-flex justify-content-between">
-        <h1 style="font-weight: 700;">Comment</h1>
+        <h1 style="">Comment</h1>
         {{-- <a type="button" class="btn btn-secondary" href="{{ route('blog.create') }}">create</a> --}}
     </header>
     <div class="container">
         <div class="py-5">
             <form class="form-container" action="{{ route('blog.store') }}" method="POST">
                 <div class="mb-3 me-auto">
-                    <label for="title" class="form-label">標題</label>
-                    <input name="title" type="text" class="form-control" id="title" placeholder="write something..." >
+                    {{-- <label for="title" class="form-label">標題</label> --}}
+                    <input name="title" type="text" class="form-control bg-dark text-white" id="title" placeholder="輸入標題" required>
                 </div>
                 <div class="mb-3">
-                    <label for="content" class="form-label">內容</label>
-                    <textarea name="content" class="form-control" id="content" rows="3" required ></textarea>
+                    {{-- <label for="content" class="form-label">內容</label> --}}
+                    <textarea name="content" class="form-control bg-dark text-white" id="content" rows="3" placeholder="輸入內容" required ></textarea>
                 </div>
                 {{ csrf_field() }}
-                <div class="d-flex justify-content-between ">
-                    <button type="submit" class="btn btn-secondary">submit</button>
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-outline-light">送出留言</button>
                 </div>
             </form>
             <div class="container">
@@ -43,8 +43,8 @@
                                 <p class="card-text text-dark">{{ $post->content }}</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a type="button" class="btn btn-sm btn-outline-secondary" href="{{ route('blog.show', $post->id) }}">View</a>
-                                        <a href="{{ route('blog.destroy', $post->id) }}" type="button" class="btn btn-sm btn-outline-secondary">delete</a>
+                                        {{-- <a type="button" class="btn btn-sm btn-outline-secondary" href="{{ route('blog.show', $post->id) }}">View</a> --}}
+                                        <a href="{{ route('blog.destroy', $post->id) }}" type="button" class="btn btn-sm btn-outline-secondary">刪除</a>
                                     </div>
                                 </div>
                             </div>
