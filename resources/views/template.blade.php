@@ -99,7 +99,7 @@
             </button>
             <!-- Top Navigation Bar -->
             <div class="container-fluid">
-                <button type="button" id="sidebarToggleBtn" onclick="sidebarToggle()" v-on:click="clickme">
+                <button type="button" id="sidebarToggleBtn" onclick="sidebarToggle()">
                     <span></span>
                     <span></span>
                     <span></span>

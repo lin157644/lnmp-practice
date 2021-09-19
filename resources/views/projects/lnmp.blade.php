@@ -2,7 +2,7 @@
 
 @section('content')
 <div id="projectLnmp" class="content">
-    <p class="h3">This is the LNMP</p>
+    <p class="h3">The LNMP</p>
     <p>
         我於Raspberry Pi 4上建立基於LNMP(Laravel Nginx MariaDB PHP) 開放原始碼框架的網頁伺服器，
         並透過Cloudflare進行DNS代管，及Let’s encrypt取得SSL憑證，提供了個人的簡歷與作品的連結，

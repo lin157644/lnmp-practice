@@ -11,7 +11,9 @@ function sidebarToggle()
 
 //Get the button
 let mybutton = document.getElementById("btn-back-to-top");
+//let section = document.getElementById("section");
 let section = document.getElementById("section");
+
 
 // When the user scrolls down 20px from the top of the document, show the button
 section.onscroll = function () {
@@ -31,5 +33,8 @@ function scrollFunction() {
 mybutton.addEventListener("click", backToTop);
 
 function backToTop() {
-  section.scrollTop = 0;
+  // section.scrollTop = 0;
+  document.getElementById("sidebarToggleBtn").scrollIntoView({ 
+    behavior: 'smooth' 
+  });
 }
